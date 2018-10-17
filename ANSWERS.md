@@ -1,4 +1,6 @@
 # Q0: Why are these two errors being thrown?
+- The first error is being thrown because our data base hadn't been migrated to work with our new project.
+- The second error is being thrown because we don't have a Pokemon model yet.
 
 # Q1: How are the random Pokemon appearing? What is the common factor between all the possible Pokemon that appear? *
 
