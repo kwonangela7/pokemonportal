@@ -3,10 +3,12 @@ class TrainersController < ApplicationController
 
   def index
     @trainers = Trainer.all
+    @pokemons = Pokemon.all
   end
 
   def show
     @trainer = Trainer.find(params[:id])
+    @pokemons = Pokemon.all
   end
 
 end

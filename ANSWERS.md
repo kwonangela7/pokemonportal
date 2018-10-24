@@ -9,6 +9,7 @@
 - It creates a medium-sized button with the words "Throw a Pokeball" that gets the id of the pokemon that you're capturing (and then it puts it in the path). This button sends a patch method.
 
 # Question 3: What would you name your own Pokemon?
+- Aivant b/c why not
 
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
 
