@@ -3,10 +3,22 @@
 <p>Name: <%= @trainer.name if @trainer.name %></p>
 <p>Email: <%= @trainer.email if @trainer.email %></p>
 
-<% @pokemons.each do |pokemon| %>
-	<% if pokemon.trainer_id == params[:id]%> 
-		<% if pokemon.ndex %>
-			<%= image_tag("pokemon/#{@pokemon.ndex}.png", alt: "pokemon") %>
-		<% end %>
-	<% end %> 
-<% end %>
+
+<div class="container">
+  <div class="row">
+    <h3>Pokemon</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% @myPokemon.each do |pokemon| %>
+            <tr>
+            	<p>Name: <%= pokemon.name if pokemon.name %></p>
+            	<p>Level: <%= pokemon.level if pokemon.level %></p>
+				<%= image_tag("pokemon/#{pokemon.ndex}.png", alt: "pokemon") %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
