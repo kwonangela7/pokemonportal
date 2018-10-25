@@ -14,6 +14,7 @@
             <tr>
             	<p>Name: <%= pokemon.name if pokemon.name %></p>
             	<p>Level: <%= pokemon.level if pokemon.level %></p>
+            	<p>Health: <%= pokemon.health %></p>
 				<%= image_tag("pokemon/#{pokemon.ndex}.png", alt: "pokemon") %>
             </tr>
           <% end %>
