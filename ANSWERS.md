@@ -12,6 +12,7 @@
 - Aivant b/c why not
 
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
+- I passed "/trainers/#{current_trainer.id}" into redirect_to. This path needed current_trainer.id and needed to be in double quotes (so that string interpolation works).
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 

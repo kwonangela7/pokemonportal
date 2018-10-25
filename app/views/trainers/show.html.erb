@@ -15,7 +15,7 @@
             	<p>Name: <%= pokemon.name if pokemon.name %></p>
             	<p>Level: <%= pokemon.level if pokemon.level %></p>
             	<p>Health: <%= pokemon.health %></p>
-				<%= image_tag("pokemon/#{pokemon.ndex}.png", alt: "pokemon") %>
+				<%= image_tag("pokemon/#{pokemon.ndex}.png", alt: "pokemon") %> <div><%= button_to "Damage!", damage_path(id: pokemon), :class => "button small", :method => :patch %></div> 
             </tr>
           <% end %>
         </tbody>

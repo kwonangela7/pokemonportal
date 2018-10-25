@@ -8,4 +8,15 @@ class PokemonController < ActionController::Base
 	end
 
 
+	def damage
+		pokemon = Pokemon.find(params[:id])
+		pokemon.update(health: pokemon.health - 10)
+		if pokemon.health <= 0
+            pokemon.delete # destory is stronger
+        end 
+		redirect_to "/trainers/#{current_trainer.id}"
+		# the hashtag is a string interpolation in ruby
+		# ruby does not interpolate strings in single quotes
+	end
+
 end

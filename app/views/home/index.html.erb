@@ -7,6 +7,7 @@
   <% end %>
   <p> A wild <%= @pokemon.name %> has appeared!</p>
   <div><%= button_to "Throw a Pokeball!", capture_path(id: @pokemon), :class => "button medium", :method => :patch %></div>
+ 
 <% end %>
 
 <%= image_tag("pokemon/pokemon-family.jpg", :alt => "pokemon") %>
