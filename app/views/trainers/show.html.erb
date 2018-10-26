@@ -3,6 +3,7 @@
 <p>Name: <%= @trainer.name if @trainer.name %></p>
 <p>Email: <%= @trainer.email if @trainer.email %></p>
 
+<div><%= button_to "Add a Pokemon", :class => "button small", :method => :patch %></div> 
 
 <div class="container">
   <div class="row">
