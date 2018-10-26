@@ -27,15 +27,15 @@ class PokemonController < ActionController::Base
 		redirect_to "/trainers/#{pokemon.trainer_id}"
 	end
 
-	private
-    # Using a private method to encapsulate the permissible parameters is
-    # a good pattern since you'll be able to reuse the same permit
-    # list between create and update. Also, you can specialize this method
-    # with per-user checking of permissible attributes.
-    def pokemon_params
-      params.require(:pokemon).permit(:name, :ndx)
-    end
-end
+# 	private
+#     # Using a private method to encapsulate the permissible parameters is
+#     # a good pattern since you'll be able to reuse the same permit
+#     # list between create and update. Also, you can specialize this method
+#     # with per-user checking of permissible attributes.
+#     def pokemon_params
+#       params.require(:pokemon).permit(:name, :ndx)
+#     end
+# end
 
 
 end
