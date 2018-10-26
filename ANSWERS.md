@@ -17,6 +17,7 @@
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 
 # Give us feedback on the project and decal below!
-- This is just a self reflection but I need to do decal work consistently so I don't forget all the good stuff I learn from each homework/lecture haha...
+- Ethan is great & Aivant is great! The project was a good reflection/refresher of things we've learned so far, and used the "heavy lifting" tools that Rails provides. Thanks again!
+- Note to self: I need to do decal work consistently so I don't forget all the good stuff I learn from each homework/lecture haha...
 
 # Extra credit: Link your Heroku deployed app

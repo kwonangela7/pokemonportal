@@ -19,4 +19,23 @@ class PokemonController < ActionController::Base
 		# ruby does not interpolate strings in single quotes
 	end
 
+	def create
+		pokemon = Pokemon.create(params[:pokemon])
+		pokemon.health = 100
+		pokemon.level = 1
+		pokemon.trainer_id = current_trainer.id
+		redirect_to "/trainers/#{pokemon.trainer_id}"
+	end
+
+	private
+    # Using a private method to encapsulate the permissible parameters is
+    # a good pattern since you'll be able to reuse the same permit
+    # list between create and update. Also, you can specialize this method
+    # with per-user checking of permissible attributes.
+    def pokemon_params
+      params.require(:pokemon).permit(:name, :ndx)
+    end
+end
+
+
 end
