@@ -20,11 +20,17 @@ class PokemonController < ActionController::Base
 	end
 
 	def create
-		pokemon = Pokemon.create(params[:pokemon])
-		pokemon.health = 100
-		pokemon.level = 1
-		pokemon.trainer_id = current_trainer.id
-		render 'new.html.erb'
+		@pokemon = Pokemon.create(params[:pokemon])
+		@pokemon.health = 100
+		@pokemon.level = 1
+		@pokemon.trainer_id = current_trainer.id
+		if @pokemon.
+		end
+		if @pokemon.
+			render 'new.html.erb'
+		end
+		# if it didnt save, render the form again
+
 	end
 
 	private
