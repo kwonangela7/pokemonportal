@@ -3,7 +3,7 @@
   <%= f.collection_radio_buttons(
     :ndex, (1..20).map {|ndex| [ndex, ndex]}, :first, :last
   ) do |b| %>
-  <div class="pokemon-choice-container"><%= b.label { image_tag("pokemon/#{b.text}.png") + b.radio_button } %></div>
+  <div class="pokemon-choice-container"><%= b.label { image_tag("pokemon/#{b.text}.png") + b.radio_button } flash[:error] = @pokemon.errors.full_messages.to_sentence %></div>
 	<% end %>
   <%= f.button :submit, class: "create-pokemon-btn" %>
 <% end %>

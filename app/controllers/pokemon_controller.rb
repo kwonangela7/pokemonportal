@@ -24,12 +24,12 @@ class PokemonController < ActionController::Base
 		@pokemon.health = 100
 		@pokemon.level = 1
 		@pokemon.trainer_id = current_trainer.id
-		if @pokemon.
-		end
-		if @pokemon.
+		if @pokemon.save
+			redirect_to "/trainers/#{current_trainer.id}"
+		else 
+			flash[:error] = @pokemon.errors.full_messages.to_sentence
 			render 'new.html.erb'
 		end
-		# if it didnt save, render the form again
 
 	end
 
