@@ -15,7 +15,7 @@
 - I passed "/trainers/#{current_trainer.id}" into redirect_to. This path needed current_trainer.id and needed to be in double quotes (so that string interpolation works).
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
-- It takes in any errors from the pokemon controller and converts them into sentences, then flashes them on the screen for the user to see.
+- It takes in any errors from the pokemon controller and converts them into sentences, then flashes them on the screen for the user to see (thakns to the render 'layouts/messages' at the end of application.html.erb)
 
 # Give us feedback on the project and decal below!
 - Ethan is great & Aivant is great! The project was a good reflection/refresher of things we've learned so far, and used the "heavy lifting" tools that Rails provides. Thanks again!
