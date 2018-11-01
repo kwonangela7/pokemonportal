@@ -19,13 +19,18 @@ class PokemonController < ActionController::Base
 		# ruby does not interpolate strings in single quotes
 	end
 
+	def new
+		@pokemon = Pokemon.new
+		render 'new'
+	end 
+
 	def create
-		@pokemon = Pokemon.create(params[:pokemon])
+		@pokemon = Pokemon.create(pokemon_params) # passing in the specific params, it's an embedded hash
 		@pokemon.health = 100
 		@pokemon.level = 1
 		@pokemon.trainer_id = current_trainer.id
 		if @pokemon.save
-			redirect_to "/trainers/#{current_trainer.id}"
+			redirect_to "/trainers/#{current_trainer.id}", method: :get
 		else 
 			flash[:error] = @pokemon.errors.full_messages.to_sentence
 			render 'new.html.erb'
@@ -39,7 +44,7 @@ class PokemonController < ActionController::Base
     # list between create and update. Also, you can specialize this method
     # with per-user checking of permissible attributes.
     def pokemon_params
-    	params.require(:pokemon).permit(:name, :ndx)
+    	params.require(:pokemon).permit(:name, :ndex)
     end
 
 

@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   # it doesn't depend on the model
   patch '/capture', to: 'pokemon#capture', as: 'capture'
   patch '/damage', to: 'pokemon#damage', as: 'damage'
-  patch '/create', to: 'pokemon#create'
+  get '/new', to: 'pokemon#new', as: 'new_pokemon'
+  post '/create', to: 'pokemon#create', as: 'create'
 end
